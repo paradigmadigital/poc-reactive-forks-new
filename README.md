@@ -66,5 +66,5 @@ Proof of concept reactive project
 
 ## License
 
-[MIT](https://gitlab.com/jesid-acosta/poc-reactive/src/main/resources/static/license.html)
+[MIT](https://gitlab.com/jesid-acosta/poc-reactive/-/blob/main/LICENSE)
 
