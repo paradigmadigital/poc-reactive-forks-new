@@ -1,0 +1,11 @@
+
+      .*******=:    ™
+      :**********-      :: Application :: ${info.app.name} (${info.app.version})
+      :***********-                       ${info.app.description}
+      :***********=     :: Profile     :: ${spring.profiles.active:DEFAULT}
+      :**********#.
+      :**********-      :: Spring Boot ::${spring-boot.formatted-version}
+      .*******=:        :: Java VM     :: ${java.specification.vendor} ${java.specification.version} (v${java.version})
+   --:                  :: Process ID  :: ${PID}
+  ****-
+  :=+=      Copyright © ${info.app.inceptionYear} All rights reserved.

@@ -1,0 +1,33 @@
+info.app:
+  name: poc reactive
+  description: Proof of concept reactive project
+  version: v0.0.1-SNAPSHOT
+  inceptionYear: 2022
+
+spring:
+  application.name: ${info.app.name}
+  datasource.initialize: true
+
+  r2dbc:
+    initialization-mode: always
+    driver-class-name: org.h2.Driver
+    url: r2dbc:h2:mem://./testdb?options=DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+    username: sa
+    password:
+
+  h2.console:
+      enabled: true
+      settings:
+        trace: true
+        web-allow-others: true
+
+springdoc.swagger-ui.use-root-path: true
+
+logging:
+  level:
+    root: ERROR
+    org.springframework: ERROR
+    org.springframework.r2dbc: ERROR
+    com.paradigmadigital.poc.reactive: INFO
+  pattern:
+    console: "%clr(%d{yyyy-MM-dd HH:mm:ss.SSS}){blue} %clr(%5level) %clr([%-36.36X{correlationId}]){faint} %clr(---){faint} %-40.40clr(%logger{0}.%M){blue} %clr(:){red} %clr(%msg){faint}%n${LOG_EXCEPTION_CONVERSION_WORD:%wEx}"
